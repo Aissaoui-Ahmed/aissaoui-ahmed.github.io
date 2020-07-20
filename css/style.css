@@ -29,35 +29,22 @@ body {
   color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600px - 300px)));
+  font-size: calc(32px + 2*(100vw - 420px)/1600);
 }
 
 .p-introduction p {
   color: #06d6a0;
   font-weight: bold;
 }
+
 #github-img {
   fill: white;
   float: right;
   margin-right: 10%;
 }
 
-/*.p-picture {
-    background-image: url('./IMG_1334.JPG');
-    background-size: 100% 100%;
-    height: 100vh;
-    transform: skewY(-30deg);
-    width: 50%;
-    filter: grayscale(80%);
-    -webkit-filter: grayscale(80%);
-    -webkit-transform: skew(0deg, 10deg);
-    transform: skew(0deg, 10deg);
-    transform-origin: center right;
-    display: block;
-    position: relative;
-    right: 0;
-}*/
 .p-picture {
+  background-attachment: fixed;
   background-image: url("./IMG_1334.JPG");
   background-size: 100% 100%;
   width: 100%;
@@ -69,18 +56,14 @@ body {
 
 .p-picture::after {
   content: "";
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(rgba(36, 41, 46, 0)),
-    color-stop(59%, #121212)
-  );
-  background-image: linear-gradient(
-    270deg,
-    rgba(36, 41, 46, 0) 0%,
-    #121212 90%
-  );
+  background-image: -webkit-gradient(linear,
+      right top,
+      left top,
+      from(rgba(36, 41, 46, 0)),
+      color-stop(59%, #121212));
+  background-image: linear-gradient(270deg,
+      rgba(36, 41, 46, 0) 0%,
+      #121212 90%);
   width: 100%;
   height: 100%;
   left: 0;
@@ -88,11 +71,13 @@ body {
   position: absolute;
   display: block;
 }
+
 .divider h1 {
   color: white;
   text-align: center;
   padding: 10px 0;
 }
+
 .skills {
   align-content: space-around;
   flex-wrap: wrap;
@@ -100,6 +85,7 @@ body {
   justify-content: center;
   height: 40vh;
 }
+
 .card {
   height: 10vh;
   width: 25%;
@@ -115,15 +101,94 @@ body {
   flex-flow: row-reverse nowrap;
   align-items: stretch;*/
 }
+
 .card:hover {
   box-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
 }
+
 .card h3 {
   align-self: center;
   color: #06d6a0;
 }
+
 .soon h1 {
   color: white;
   text-align: center;
   padding: 10px 0;
+}
+
+@media only screen and (max-width: 830px) {
+
+  .row {
+    display: block;
+    height: 100vh;
+  }
+
+  .skills {
+    display: flex !important;
+  }
+
+  .p-introduction {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 0 0 40px;
+    z-index: 2;
+  }
+
+  .p-introduction h1 {
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: calc(32px + 2*(100vw - 420px)/830);
+    text-align: center;
+  }
+
+  .p-introduction p {
+    color: #06d6a0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .github-account {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 500%);
+  }
+
+  #github-img {
+    fill: white;
+
+  }
+
+  .p-picture {
+    background-image: url("./IMG_1334.JPG");
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: none;
+    position: absolute;
+    top: 0;
+  }
+
+  .p-picture::after {
+    content: "";
+    background-image: -webkit-gradient(linear,
+        right top,
+        left top,
+        from(rgba(36, 41, 46, 0)),
+        color-stop(59%, #121212));
+    background-image: linear-gradient(180deg,
+        rgba(36, 41, 46, 0) 0%,
+        #121212 90%);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+  }
 }
