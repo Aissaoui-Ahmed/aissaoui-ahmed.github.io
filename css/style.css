@@ -44,7 +44,7 @@ body {
 }
 
 .p-picture {
-  background-attachment: fixed;
+  background-attachment: initial;
   background-image: url("./IMG_1334.JPG");
   background-size: 100% 100%;
   width: 100%;
@@ -166,6 +166,7 @@ body {
   .p-picture {
     background-image: url("./IMG_1334.JPG");
     background-size: 100% 100%;
+    background-attachment: fixed;
     width: 100%;
     height: 100%;
     z-index: -1;
