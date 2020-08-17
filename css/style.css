@@ -193,3 +193,27 @@ body {
     display: block;
   }
 }
+
+.soon {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.soon .box {
+  align-self: center;
+  object-fit: cover;
+}
+
+.box video {
+  margin-bottom: 20px;
+}
+
+.box h4 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  color: #06d6a0;
+}
