@@ -1,3 +1,4 @@
+/* color palatte PRIMARY :#06d6a0 , SECONDARY:#aa8dff */
 * {
   margin: 0;
   padding: 0;
@@ -83,23 +84,19 @@ body {
   flex-wrap: wrap;
   padding: 0 20px;
   justify-content: center;
-  height: 40vh;
+  height: 100vh;
+  margin: 0 16px;
 }
 
 .card {
   height: 10vh;
   width: 25%;
   display: flex;
-  justify-content: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
   text-align: center;
-  background-image: url("./drugoc.png");
+  align-items: center;
   transition: box-shadow 0.5s linear;
-  /*background-color: #121212;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row-reverse nowrap;
-  align-items: stretch;*/
 }
 
 .card:hover {
@@ -110,13 +107,63 @@ body {
   align-self: center;
   color: #06d6a0;
 }
-
+.icon{
+  font-size:24px;
+}
 .soon h1 {
   color: white;
   text-align: center;
   padding: 10px 0;
 }
-
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin:0 40px;
+}
+.projects .box{
+  width: 320px;
+  padding: 25px 50px;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  border-radius:8px ;
+ transition: box-shadow 0.5s linear;
+}
+.projects .box:hover{
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
+}
+.box p{
+  line-height: 1.5;
+  margin: 15px 0;
+  color: #fff;
+}
+.projects a{
+  align-self: flex-end;
+  text-decoration: none;
+  margin: 5px 0;
+  color: #aa8dff;
+  transition: color .4s linear;
+}
+.projects a:hover{
+  color: #0062d2;
+}
+.projects .box h3{
+  margin: 5px 0;
+  color: #06d6a0;
+}
+footer{
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #aa8dff;
+  color: #fff;
+}
+.footer-p{
+  font-weight: bold;
+}
 @media only screen and (max-width: 830px) {
 
   .row {
@@ -160,7 +207,10 @@ body {
 
   #github-img {
     fill: white;
-
+    transition: fill .4s linear;
+  }
+  #github-img:hover{
+    fill:#06d6a0;
   }
 
   .p-picture {
@@ -197,7 +247,7 @@ body {
 .soon {
   display: flex;
   flex-direction: row;
-  align-content: center;
+  align-content: space-evenly;
   justify-content: space-around;
   margin-bottom: 20px;
   flex-wrap: wrap;
