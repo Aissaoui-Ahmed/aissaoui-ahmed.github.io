@@ -46,7 +46,7 @@ body {
 
 .p-picture {
   background-attachment: initial;
-  background-image: url("./IMG_1334.JPG");
+  background-image: url("IMG_1359.JPG");
   background-size: 100% 100%;
   width: 100%;
   z-index: -1;
@@ -106,16 +106,12 @@ body {
 .card h3 {
   align-self: center;
   color: #06d6a0;
-  margin: 5px;
+  margin: 10px;
 }
 .icon{
   font-size:24px;
 }
-.soon h1 {
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
+
 .projects{
   display: flex;
   flex-wrap: wrap;
@@ -185,7 +181,6 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 0 0 0 40px;
     z-index: 2;
   }
 
@@ -207,7 +202,7 @@ footer{
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 500%);
+    transform: translate(0, 500%);
   }
 
   #github-img {
@@ -219,7 +214,7 @@ footer{
   }
 
   .p-picture {
-    background-image: url("./IMG_1334.JPG");
+    background-image: url("IMG_1359.JPG");
     background-size: 100% 100%;
     background-attachment: fixed;
     width: 100%;
@@ -248,25 +243,6 @@ footer{
     display: block;
   }
 }
-
-.soon {
-  display: flex;
-  flex-direction: row;
-  align-content: space-evenly;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.soon .box {
-  align-self: center;
-  object-fit: cover;
-}
-
-.box video {
-  margin-bottom: 20px;
-}
-
 .box h4 {
   color: white;
   text-transform: uppercase;
