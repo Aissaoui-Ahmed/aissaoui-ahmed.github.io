@@ -4,7 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@font-face{
+  font-family: 'Gotham Pro';
+  src:url('./GothaProReg.otf')
+}
 body {
   background-color: #121212;
   height: 100vh;
@@ -23,7 +26,7 @@ body {
 
 .p-introduction {
   align-self: center;
-  line-height: 1.2;
+  line-height: 1.5;
   padding: 0 0 0 40px;
 }
 
@@ -42,6 +45,7 @@ body {
 #github-img {
   fill: white;
   float: right;
+  margin-top: 25px;
   margin-right: 10%;
 }
 
