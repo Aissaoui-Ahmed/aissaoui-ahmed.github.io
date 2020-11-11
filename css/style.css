@@ -1,0 +1,257 @@
+/* color palatte PRIMARY :#06d6a0 , SECONDARY:#aa8dff */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face{
+  font-family: 'Gotham Pro';
+  src:url('./GothaProReg.otf')
+}
+body {
+  background-color: #121212;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Gotham Pro";
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  margin-bottom: 50px;
+}
+
+.p-introduction {
+  align-self: center;
+  line-height: 1.5;
+  padding: 0 0 0 40px;
+}
+
+.p-introduction h1 {
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: calc(32px + 2*(100vw - 420px)/1600);
+}
+
+.p-introduction p {
+  color: #06d6a0;
+  font-weight: bold;
+}
+
+#github-img {
+  fill: white;
+  float: right;
+  margin-top: 25px;
+  margin-right: 10%;
+}
+
+.p-picture {
+  background-attachment: initial;
+  background-image: url("IMG_1359.JPG");
+  background-size: 100% 100%;
+  width: 100%;
+  z-index: -1;
+  -webkit-transform: skew(0deg, 10deg);
+  transform: skew(0deg, 1deg);
+  transform-origin: center right;
+}
+
+.p-picture::after {
+  content: "";
+  background-image: -webkit-gradient(linear,
+      right top,
+      left top,
+      from(rgba(36, 41, 46, 0)),
+      color-stop(59%, #121212));
+  background-image: linear-gradient(270deg,
+      rgba(36, 41, 46, 0) 0%,
+      #121212 90%);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 1px;
+  position: absolute;
+  display: block;
+}
+
+.divider h1 {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.skills {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  justify-content: center;
+  margin: 0 16px;
+  margin-bottom: 50px;
+}
+
+.card {
+  height: 10vh;
+  margin: 25px;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border-radius: 8px;
+  transition: box-shadow 0.5s linear;
+}
+
+.card:hover {
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  align-self: center;
+  color: #06d6a0;
+  margin: 10px;
+}
+.icon{
+  font-size:24px;
+}
+
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin:0 40px;
+}
+.projects .box{
+  width: 320px;
+  padding: 25px 50px;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  border-radius:8px ;
+ transition: box-shadow 0.5s linear;
+}
+.projects .box:hover{
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
+}
+.box p{
+  line-height: 1.5;
+  margin: 15px 0;
+  color: #fff;
+}
+.projects a{
+  align-self: flex-end;
+  text-decoration: none;
+  margin: 5px 0;
+  color: #aa8dff;
+  transition: color .4s linear;
+}
+.projects a:hover{
+  color: #0062d2;
+}
+.projects .box h3{
+  margin: 5px 0;
+  color: #06d6a0;
+}
+footer{
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #aa8dff;
+  color: #fff;
+}
+.footer-p{
+  font-weight: bold;
+}
+@media only screen and (max-width: 830px) {
+
+  .row {
+    display: block;
+    height: 100vh;
+  }
+
+  .skills {
+    display: flex !important;
+    flex-wrap: wrap;
+  padding: 0 10px;
+  justify-content: center;
+  margin: 0 16px; 
+  }
+
+  .p-introduction {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .p-introduction h1 {
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: calc(32px + 2*(100vw - 420px)/830);
+    text-align: center;
+  }
+
+  .p-introduction p {
+    color: #06d6a0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .github-account {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(0, 500%);
+  }
+
+  #github-img {
+    fill: white;
+    transition: fill .4s linear;
+  }
+  #github-img:hover{
+    fill:#06d6a0;
+  }
+
+  .p-picture {
+    background-image: url("IMG_1359.JPG");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: none;
+    position: absolute;
+    top: 0;
+  }
+
+  .p-picture::after {
+    content: "";
+    background-image: -webkit-gradient(linear,
+        right top,
+        left top,
+        from(rgba(36, 41, 46, 0)),
+        color-stop(59%, #121212));
+    background-image: linear-gradient(180deg,
+        rgba(36, 41, 46, 0) 0%,
+        #121212 90%);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+  }
+}
+.box h4 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  color: #06d6a0;
+}
